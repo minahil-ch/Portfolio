@@ -21,13 +21,6 @@ const testimonials = [
         avatar: "SB",
     },
     {
-        name: "Prof. Ambreen Kousar",
-        role: "Department Coordinator",
-        company: "COMSATS University",
-        content: "One of the most dedicated students I've had the pleasure of teaching. Her academic excellence is a testament to her hard work, but her practical projects truly showcase her engineering talent.",
-        avatar: "AK",
-    },
-    {
         name: "Prof. Muhammad Abdullah",
         role: "Academic Supervisor",
         company: "COMSATS University",

@@ -43,6 +43,7 @@ export default function ProjectDetail() {
                         src={project.image}
                         alt={project.name}
                         fill
+                        unoptimized={true}
                         className="object-cover"
                     />
                 </div>
@@ -62,6 +63,29 @@ export default function ProjectDetail() {
                                 {project.solution}
                             </p>
                         </section>
+
+                        {(project as any).gallery && (project as any).gallery.length > 0 && (
+                            <section className="space-y-6 pt-12">
+                                <h2 className="text-2xl font-bold">Project Screenshots</h2>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    {(project as any).gallery.map((img: string, idx: number) => (
+                                        <motion.div
+                                            key={idx}
+                                            whileHover={{ scale: 1.02 }}
+                                            className="relative aspect-[4/5] sm:aspect-[3/4] rounded-2xl overflow-hidden border border-border shadow-lg bg-muted/20"
+                                        >
+                                            <Image
+                                                src={img}
+                                                alt={`${project.name} Screenshot ${idx + 1}`}
+                                                fill
+                                                unoptimized={true}
+                                                className="object-contain p-2"
+                                            />
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </section>
+                        )}
 
                         <section className="space-y-4">
                             <h2 className="text-2xl font-bold">Key Technical Contributions</h2>

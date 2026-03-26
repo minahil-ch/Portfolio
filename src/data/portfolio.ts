@@ -39,7 +39,19 @@ export const portfolioData = {
             solution: "Developed a mobile POS using Flutter and SQLite for offline storage. Led the development of a responsive web version for real-time billing and inventory.",
             role: "Team Lead & Lead Developer",
             github: "https://github.com/minahil-ch",
-            image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800",
+            image: "/projects/pos/splash.png",
+            gallery: [
+                "/projects/pos/splash.png",
+                "/projects/pos/login.png",
+                "/projects/pos/dashboard.png",
+                "/projects/pos/alerts.png",
+                "/projects/pos/products.png",
+                "/projects/pos/products-action.png",
+                "/projects/pos/customers.png",
+                "/projects/pos/add-customer.png",
+                "/projects/pos/reports.png",
+                "/projects/pos/settings.png"
+            ]
         },
         {
             id: "2",
@@ -61,18 +73,24 @@ export const portfolioData = {
             solution: "Designed a simple turn-based Ludo game with smooth animations and intuitive user interface.",
             role: "Flutter Developer",
             github: "https://github.com/minahil-ch",
-            image: "https://images.unsplash.com/photo-1610819013583-29c81732650b?auto=format&fit=crop&q=80&w=800",
+            image: "/projects/ludo/start.png",
+            gallery: [
+                "/projects/ludo/start.png",
+                "/projects/ludo/turn.png",
+                "/projects/ludo/scoreboard.png",
+                "/projects/ludo/gameover.png"
+            ]
         },
         {
             id: "4",
-            name: "CV App",
-            slug: "cv-app",
+            name: "Professional Resume",
+            slug: "professional-resume",
             tech: ["Flutter", "Dart"],
             problem: "Sharing professional profile and portfolio in a mobile-native format.",
             solution: "Built a dedicated Flutter app to introduce my work and professional personality.",
             role: "Flutter Developer",
             github: "https://github.com/minahil-ch",
-            image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800",
+            image: "/projects/resume/main.png",
         },
         {
             id: "5",
@@ -83,7 +101,13 @@ export const portfolioData = {
             solution: "Developed a tool to calculate and store semester-wise CGPA, providing predictions for target goals.",
             role: "Flutter Developer",
             github: "https://github.com/minahil-ch",
-            image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800",
+            image: "/projects/cgpa/main.png",
+            gallery: [
+                "/projects/cgpa/summary.png",
+                "/projects/cgpa/calc-gpa.png",
+                "/projects/cgpa/calc-cgpa.png",
+                "/projects/cgpa/planner.png"
+            ]
         },
         {
             id: "6",
@@ -170,8 +194,8 @@ export const portfolioData = {
     ],
     activities: [
         {
-            role: "Vice President",
-            org: "Character Building Society",
+            role: "Senior Vice President",
+            org: "Character Building Society at COMSATS University Vehari",
             desc: "Organized motivational and awareness events to promote integrity and leadership."
         },
         {

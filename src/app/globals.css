@@ -5,31 +5,31 @@
   --font-sans: var(--font-inter), ui-sans-serif, system-ui;
   --font-poppins: var(--font-poppins), sans-serif;
 
-  /* Refined Palette - Indigo Slate for Professionalism */
-  --color-background: oklch(98% 0.005 240);
-  --color-foreground: oklch(20% 0.02 240);
+  /* Refined Palette - Indigo Slate for Professionalism - HEX version for PDF compatibility */
+  --color-background: #f8fafc;
+  --color-foreground: #0f172a;
 
-  --color-card: oklch(100% 0 0);
-  --color-card-foreground: oklch(20% 0.02 240);
+  --color-card: #ffffff;
+  --color-card-foreground: #0f172a;
 
-  --color-primary: oklch(55% 0.18 250);
+  --color-primary: #6366f1;
   /* Refined Indigo */
-  --color-primary-foreground: oklch(98% 0.005 240);
+  --color-primary-foreground: #f8fafc;
 
-  --color-secondary: oklch(94% 0.01 240);
-  --color-secondary-foreground: oklch(20% 0.02 240);
+  --color-secondary: #f1f5f9;
+  --color-secondary-foreground: #0f172a;
 
-  --color-muted: oklch(92% 0.01 240);
-  --color-muted-foreground: oklch(45% 0.02 240);
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
 
-  --color-accent: oklch(94% 0.12 250 / 0.1);
-  --color-accent-foreground: oklch(55% 0.18 250);
+  --color-accent: rgba(99, 102, 241, 0.1);
+  --color-accent-foreground: #6366f1;
 
-  --color-border: oklch(88% 0.01 240);
-  --color-input: oklch(88% 0.01 240);
-  --color-ring: oklch(55% 0.18 250);
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-ring: #6366f1;
 
-  --color-teal: oklch(75% 0.15 190);
+  --color-teal: #14b8a6;
   /* Cyan/Teal accent for glow */
 
   --radius-lg: 1.25rem;
@@ -38,27 +38,27 @@
 }
 
 .dark {
-  --color-background: oklch(14% 0.02 250);
-  --color-foreground: oklch(95% 0.01 240);
+  --color-background: #0f172a;
+  --color-foreground: #f8fafc;
 
-  --color-card: oklch(18% 0.02 250);
-  --color-card-foreground: oklch(95% 0.01 240);
+  --color-card: #1e293b;
+  --color-card-foreground: #f8fafc;
 
-  --color-primary: oklch(65% 0.2 250);
-  --color-primary-foreground: oklch(10% 0.02 250);
+  --color-primary: #818cf8;
+  --color-primary-foreground: #0f172a;
 
-  --color-secondary: oklch(22% 0.02 250);
-  --color-secondary-foreground: oklch(95% 0.01 240);
+  --color-secondary: #1e293b;
+  --color-secondary-foreground: #f8fafc;
 
-  --color-muted: oklch(25% 0.02 250);
-  --color-muted-foreground: oklch(65% 0.02 240);
+  --color-muted: #334155;
+  --color-muted-foreground: #94a3b8;
 
-  --color-accent: oklch(65% 0.2 250 / 0.15);
-  --color-accent-foreground: oklch(65% 0.2 250);
+  --color-accent: rgba(129, 140, 248, 0.15);
+  --color-accent-foreground: #818cf8;
 
-  --color-border: oklch(26% 0.02 250);
-  --color-input: oklch(26% 0.02 250);
-  --color-ring: oklch(65% 0.2 250);
+  --color-border: #1e293b;
+  --color-input: #1e293b;
+  --color-ring: #818cf8;
 }
 
 @layer base {

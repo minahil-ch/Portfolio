@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MoveRight, Github, Linkedin, Mail, ArrowDown, ChevronRight, Download, User, Calendar, Briefcase, Phone, Users } from "lucide-react";
+import { MoveRight, Github, Linkedin, Mail, ArrowDown, ChevronRight, Download, User, Calendar, Briefcase, Phone, Users, FileText } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
@@ -53,25 +53,7 @@ export default function Home() {
       <section className="min-h-screen w-full flex flex-col justify-center items-center relative overflow-hidden bg-mesh py-20">
         <div className="container max-w-6xl mx-auto z-10 px-6 flex flex-col items-center">
 
-          {/* Greeting Badge */}
-          <Reveal y={-20}>
-            <div className="at-greeting-badge mb-10">
-              AsslamuAlikum
-            </div>
-          </Reveal>
 
-          {/* Centered Profile Image with Glowing Ring */}
-          <Reveal y={20} delay={0.2}>
-            <div className="at-profile-ring h-48 w-48 md:h-64 md:w-64 mb-12">
-              <div className="w-full h-full rounded-full overflow-hidden border-4 border-[#071E1C]">
-                <img
-                  src="/profile.png"
-                  alt="Minahil Anjum"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </Reveal>
 
           {/* Name and Headline */}
           <div className="text-center space-y-6 mb-20">
@@ -90,27 +72,27 @@ export default function Home() {
             </Reveal>
           </div>
 
-          {/* Personal Details Grid */}
+          {/* Personal Details - Elegant Profile Info */}
           <Reveal y={40} delay={0.6}>
-            <div className="w-full grid md:grid-cols-2 gap-x-12 gap-y-6 max-w-5xl">
-              {[
-                { label: "Full Name:", value: portfolioData.name, icon: <User size={20} /> },
-                { label: "Email Address:", value: portfolioData.email, icon: <Mail size={20} /> },
-                { label: "Date of Birth:", value: portfolioData.dob || "25-12-2004", icon: <Calendar size={20} /> },
-                { label: "Professional Title:", value: portfolioData.role, icon: <Briefcase size={20} /> },
-                { label: "Phone:", value: portfolioData.mobile, icon: <Phone size={20} /> },
-                { label: "Languages:", value: portfolioData.languages.map(l => l.split(' ')[0]).join(', '), icon: <Users size={20} /> }
-              ].map((item, i) => (
-                <div key={i} className="at-details-grid-item border-b border-white/5 md:border-none">
-                  <div className="at-details-icon">
-                    {item.icon}
+            <div className="w-full max-w-5xl bg-card/30 backdrop-blur-md rounded-[2.5rem] border border-border/40 p-10 md:p-14 shadow-2xl relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 opacity-20 pointer-events-none" />
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 relative z-10">
+                {[
+                  { label: "Identity", value: portfolioData.name, icon: <User size={18} /> },
+                  { label: "Communication", value: portfolioData.email, icon: <Mail size={18} /> },
+                  { label: "Availability", value: "Open to Work", icon: <Calendar size={18} /> },
+                  { label: "Specialization", value: portfolioData.role, icon: <Briefcase size={18} /> },
+                  { label: "Connection", value: portfolioData.mobile, icon: <Phone size={18} /> },
+                  { label: "Proficiency", value: portfolioData.languages.map(l => l.split(' ')[0]).slice(0, 3).join(', '), icon: <Users size={18} /> }
+                ].map((item, i) => (
+                  <div key={i} className="flex flex-col gap-3 group/item">
+                    <div className="flex items-center gap-3 text-muted-foreground/60 text-[10px] font-black uppercase tracking-widest border-b border-border/30 pb-2 transition-colors group-hover/item:border-primary/40 group-hover/item:text-primary/60">
+                      {item.icon} {item.label}
+                    </div>
+                    <span className="text-foreground font-black tracking-tight text-lg uppercase truncate font-poppins">{item.value}</span>
                   </div>
-                  <div className="flex flex-col md:flex-row md:items-center justify-between flex-grow gap-2">
-                    <span className="text-muted-foreground font-medium whitespace-nowrap">{item.label}</span>
-                    <span className="text-foreground font-bold text-right">{item.value}</span>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </Reveal>
 
@@ -162,29 +144,24 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* About Section Teaser */}
-      <section className="section-padding w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-32 items-center">
-        <div className="relative group">
+      {/* About Section Teaser - Typographic Refinement */}
+      <section className="section-padding w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
+        <div className="lg:w-1/3 relative">
           <Reveal x={-30}>
-            <div className="relative aspect-[4/5] rounded-[1.5rem] overflow-hidden">
-              <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/2 transition-colors duration-700" />
-              <div className="w-full h-full glass-card rounded-[1.5rem] flex items-center justify-center border border-border/30 overflow-hidden relative">
-                <img
-                  src="/profile.png"
-                  alt="Minahil Anjum"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 opacity-90"
-                />
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <span className="text-[10rem] font-bold text-primary/5 select-none italic">Minahil</span>
-                </div>
+            <div className="relative p-10 rounded-[2rem] glass-card border-primary/10 overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 opacity-30 group-hover:bg-primary/40 transition-colors" />
+              <div className="space-y-6 relative z-10">
+                <div className="text-6xl font-black text-primary/10 select-none italic absolute -top-10 -left-6 tracking-tighter">MA</div>
+                <h3 className="text-2xl font-black uppercase tracking-tight font-poppins text-foreground leading-none">Minahil <br/> Anjum</h3>
+                <div className="h-1 w-12 bg-primary rounded-full" />
+                <p className="text-sm font-bold tracking-widest text-muted-foreground uppercase">Software Engineer <br/> & MERN Specialist</p>
               </div>
             </div>
           </Reveal>
-          <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-primary/30 rounded-full blur-[100px] opacity-20" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border border-primary/10 rounded-[2rem] rotate-6 scale-105 -z-10" />
+          <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-[80px] opacity-10" />
         </div>
 
-        <div className="space-y-10">
+        <div className="lg:w-2/3 space-y-10">
           <Reveal y={20}>
             <div className="inline-flex items-center gap-3 text-primary font-bold tracking-widest uppercase text-xs">
               <div className="h-px w-8 bg-primary" />
@@ -225,9 +202,11 @@ export default function Home() {
                 </Button>
               </Link>
               <Magnetic>
-                <Button className="rounded-full px-8 py-6 font-bold shadow-xl flex gap-2">
-                  <Download size={18} /> Download CV
-                </Button>
+                <Link href="/resume">
+                  <Button className="rounded-full px-8 py-6 font-bold shadow-xl flex gap-2">
+                    <FileText size={18} /> View CV
+                  </Button>
+                </Link>
               </Magnetic>
             </div>
           </Reveal>

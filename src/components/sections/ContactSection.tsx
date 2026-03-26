@@ -47,19 +47,19 @@ export default function ContactSection() {
                                 { label: "Location", value: "Vehari, Pakistan", icon: <MapPin size={24} /> }
                             ].map((item, i) => (
                                 <Reveal key={i} y={20} delay={0.4 + i * 0.1}>
-                                    <div className="group flex items-center gap-6 p-6 rounded-3xl bg-background border border-border/50 hover:border-primary/30 transition-all shadow-sm overflow-hidden">
-                                        <div className="p-4 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all shrink-0">
-                                            {item.icon}
+                                    <div className="group flex items-center gap-4 p-4 rounded-2xl bg-background border border-border/50 hover:border-primary/30 transition-all shadow-sm overflow-hidden">
+                                        <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all shrink-0">
+                                            {React.cloneElement(item.icon as React.ReactElement<any>, { size: 18 })}
                                         </div>
                                         <div className="flex-grow min-w-0">
-                                            <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em] mb-1 opacity-70">{item.label}</p>
-                                            <h4 className={`text-sm md:text-base font-bold uppercase tracking-tight whitespace-nowrap overflow-hidden text-ellipsis ${item.isEmail ? "text-primary" : ""}`}>
+                                            <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-[0.2em] mb-0.5 opacity-70">{item.label}</p>
+                                            <h4 className={`text-xs md:text-sm font-bold tracking-tight whitespace-nowrap overflow-hidden text-ellipsis ${item.isEmail ? "text-primary lowercase" : "uppercase"}`}>
                                                 {item.value}
                                             </h4>
                                         </div>
                                         {item.isEmail && (
-                                            <button onClick={copyEmail} className="p-3 rounded-full hover:bg-secondary transition-colors text-muted-foreground hover:text-primary">
-                                                {copied ? <Check size={20} className="text-green-500" /> : <Copy size={20} />}
+                                            <button onClick={copyEmail} className="p-2 rounded-full hover:bg-secondary transition-colors text-muted-foreground hover:text-primary">
+                                                {copied ? <Check size={16} className="text-green-500" /> : <Copy size={16} />}
                                             </button>
                                         )}
                                     </div>
