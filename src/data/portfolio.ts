@@ -1,7 +1,7 @@
 export const portfolioData = {
     name: "Minahil Anjum",
-    role: "Mobile App & MERN Stack Developer",
-    headline: "Consistency Makes a Person Perfect in Their Skill Set.",
+    role: "Mobile App & MERN Stack Specialist",
+    headline: "Software Engineer, Mobile App & MERN Stack Specialist",
     dob: "09-02-2006",
     summary: "A passionate and detail-oriented Software Engineering student eager to apply academic knowledge and hands-on project experience in real-world software development environments. Dedicated to building efficient, user-friendly applications with clean UI and maintainable code.",
     objective: "Seeking opportunities to learn, collaborate, and contribute to innovative projects that make a meaningful impact.",
@@ -62,7 +62,8 @@ export const portfolioData = {
             solution: "Created a desktop application with full CRUD operations and secure SQL handling for data flow.",
             role: "C# Developer",
             github: "https://github.com/minahil-ch",
-            image: "https://images.unsplash.com/photo-1454165833767-12461a9961d7?auto=format&fit=crop&q=80&w=800",
+            image: "/projects/employee/assessment.png",
+            gallery: ["/projects/employee/assessment.png"]
         },
         {
             id: "3",
@@ -73,25 +74,14 @@ export const portfolioData = {
             solution: "Designed a simple turn-based Ludo game with smooth animations and intuitive user interface.",
             role: "Flutter Developer",
             github: "https://github.com/minahil-ch",
-            image: "/projects/ludo/start.png",
+            image: "/projects/ludo/turn.png",
             gallery: [
-                "/projects/ludo/start.png",
                 "/projects/ludo/turn.png",
                 "/projects/ludo/scoreboard.png",
                 "/projects/ludo/gameover.png"
             ]
         },
-        {
-            id: "4",
-            name: "Professional Resume",
-            slug: "professional-resume",
-            tech: ["Flutter", "Dart"],
-            problem: "Sharing professional profile and portfolio in a mobile-native format.",
-            solution: "Built a dedicated Flutter app to introduce my work and professional personality.",
-            role: "Flutter Developer",
-            github: "https://github.com/minahil-ch",
-            image: "/projects/resume/main.png",
-        },
+
         {
             id: "5",
             name: "CGPA Calculator",
@@ -218,22 +208,31 @@ export const portfolioData = {
     ],
     services: [
         {
+            _id: "s1",
             id: "1",
             title: "Web Development",
-            desc: "Custom, responsive websites built with the latest MERN stack technologies for optimal performance.",
-            icon: "Globe"
+            desc: "Scalable, high-performance web applications using the MERN stack (MongoDB, Express, React, Node.js).",
+            description: "I build robust and scalable web applications tailored to your business needs. From initial architecture to deployment, I ensure every line of code contributes to a seamless user experience and solid performance.",
+            icon: "Globe",
+            features: ["Custom UI/UX", "SEO Optimization", "API Integration", "Secure Authentication"]
         },
         {
+            _id: "s2",
             id: "2",
             title: "Mobile App Development",
-            desc: "Feature-rich cross-platform mobile applications developed with Flutter for iOS and Android.",
-            icon: "Smartphone"
+            desc: "Expertly crafted cross-platform mobile apps for iOS and Android using Flutter and Dart.",
+            description: "Deliver your vision to every pocket. I specialize in building high-performance, native-feeling mobile applications that share a single codebase, reducing time-to-market without compromising on quality.",
+            icon: "Smartphone",
+            features: ["Cross-Platform", "Push Notifications", "Offline Support", "Store Deployment"]
         },
         {
+            _id: "s3",
             id: "3",
             title: "UI/UX Design",
-            desc: "Modern, user-centric interface designs focusing on elegance, usability, and brand identity.",
-            icon: "Palette"
+            desc: "User-centric interface designs focusing on elegance, usability, and brand identity.",
+            description: "Design that speaks without words. I create intuitive and aesthetically pleasing interfaces that prioritize user flow and conversion, ensuring your product is as beautiful as it is functional.",
+            icon: "Palette",
+            features: ["User Research", "Wireframing", "Interactive Prototypes", "Design Systems"]
         }
     ],
     blogPosts: [
